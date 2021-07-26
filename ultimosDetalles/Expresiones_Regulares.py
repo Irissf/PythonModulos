@@ -23,7 +23,7 @@ lista_Nombres=['Ana Góñez',
 
 print("Empieza con San")
 for elemento in lista_Nombres:
-    #todos los nombres que empiezan por San, con '^'
+    #todos tienen San, con '^' tiene en cuenta la mayuscula
     if re.findall('^San',elemento):
         print(elemento)
 
@@ -49,3 +49,10 @@ for elemento in lista_palabras:
     #lista de los niños y niñas, entre [] los caracteres que puede tener
     if re.findall('niñ[oa]s',elemento):
         print(elemento)
+
+print("\n contiene una letra entre la o y la p")
+for elemento in lista_palabras:
+    #todos los nombres con letras entre la o y la t
+    if re.findall('[o-t]', elemento):
+        print(elemento)
+        
